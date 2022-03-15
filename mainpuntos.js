@@ -82,29 +82,26 @@ const productos = [
 ];
 
 
-//Funcion mejorada con desestructuracion y un bucle for of, antes usaba el de abajo que esta comentado
 function descuentos (entrada) {
 console.log(entrada)
 let contenedor = document.querySelector("#salidaPuntos");
-const [{prod}] = productos;
-const [{img}] = productos;
-for ({id} of productos) {
-//	console.log(id);
-	(id == entrada) ? 
-	 contenedor.innerHTML = `<div style=width:350px;border:solid 2px;>
+productos.forEach(object => {
+	 (object.id == entrada) ?
+
+      contenedor.innerHTML = `<div style=width:350px;border:solid 2px;>
 <style type="text/css">div {margin:auto;
               text-align:center;
               background-color:;}
               .divInterno{background-color:orange;
                 color:white;}
 </style>
-<div class="divInterno" style=width:330px;border:solid 2px><p>${prod}<br><br> 
-<img src="${img}" width=250px alt=""><br>
+<div class="divInterno" style=width:330px;border:solid 2px><p>${object.prod}<br><br> 
+<img src="${object.img}" width=250px alt=""><br>
 Recorda que tenés 30 días para canjearlo a partir de hoy.</p></div></div>`
-:
-console.log("referencia de control")
+ :  
+ console.log("control") 
 }
-}
+)}
 
 
 //Funcion home banking

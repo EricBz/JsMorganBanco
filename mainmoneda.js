@@ -36,13 +36,13 @@ function cvmoneda() {
 				let resultado = monto * 160;
 				let contenedor = document.querySelector("#salidaMoneda");
 				contenedor.innerHTML = `<div style=background:red;><p style=color:white;>Usted deberá abonar ${resultado} pesos ARS.</p></div>`;
-    	///	  	document.body.salidaMoneda.append(contenedor);
+    	
 			}
 			else if (compraventa == "VENDER") {
 				let resultado = monto * 150;
 				let contenedor = document.querySelector("#salidaMoneda");
 				contenedor.innerHTML = `<div style=background:red;><p style=color:white;>Usted obtendrá ${resultado} pesos ARS.</p></div>`;
-    	//	  	document.body.salidaMoneda.append(contenedor);
+    	
 			}
 			else { alert("Recuerde seleccionar COMPRAR/VENDER en letras mayúsculas"); }
 			break;
@@ -51,13 +51,13 @@ function cvmoneda() {
 				let resultado = monto * 250;
 				let contenedor = document.querySelector("#salidaMoneda");
 				contenedor.innerHTML = `<div style=background:red;><p style=color:white;>Usted deberá abonar ${resultado} pesos ARS.</p></div>`;
-    	//	  	document.body.salidaMoneda.append(contenedor);
+    	
 			}
 			else if (compraventa == "VENDER") {
 				let resultado = monto * 240;
 				let contenedor = document.querySelector("#salidaMoneda");
 				contenedor.innerHTML = `<div style=background:red;><p style=color:white;>Usted obtendrá ${resultado} pesos ARS.</p></div>`;
-    	//	  	document.body.salidaMoneda.append(contenedor);
+
 			}
 			else {
 				alert("Recuerde seleccionar COMPRAR/VENDER en letras mayúsculas");
