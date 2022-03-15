@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco JsMorgan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilos.css">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <header class="row">
+      <div class="row col-12 d-flex">
+        <div class="col-5 align-middle text-danger">
+          <h1>Banco JsMorgan Argentina</h1>
+        </div>
+        <div class="col-7">
+          <p>La histórica empresa financiera respaldada por décadas de historia, abre en Argentina su primera filial con el objetivo de brindar sus servicios financieros ya no solo a grandes empresas sino también a grandes personas.
+          </p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div>
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/banco.jpg" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                  <h2>Banco JsMorgan Argentina</h2>
+                  <p>Abre sus puertas en Argentina el banco líder en el mundo.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/familia tarjeta.jpg" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Confianza</h5>
+                  <p>Millones de personas confian en nuestra institución.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/tarjetasencabezado.jpg" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Aprovecha</h5>
+                  <p>Aprovecha las ofertas y beneficios de pertenecer a nuestra casa.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-evenly">
+        <div class="col-12 container-fluid">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Home</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="">Puntos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Compra-Venta Moneda extranjera.</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Turnos</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="row">
+      <!--cuerpo del body, debajo del carrusel-->
+      <div class="col-9 d-flex flex-wrap align-content-center justify-content-around">
+        <div class="fondoIndexLogin">
+          <form name=form>
+            <p>Registrate</p>
+            <P>Usuario: <INPUT id="us0" type=text name=login>
+            <P>Contraseña: <INPUT id="pass0" type=password name=password>
+              <INPUT onclick=registro() type=button value=Acceder>
+            <div id="mensajeReg">
+            </div>
+          </form>
+        </div>
+        <div class="fondoIndexLogin">
+          <form name=form action="moneda.html">
+            <p>Si ya estas registrado ingresa a tu Home Banking</p>
+            <p>Usuario: <input id="us" type=text name=login>
+            <p>Contraseña: <input id="pass" type=password name=password>
+              <input onclick=go() type=button value=Acceder>
+            <div id="mensajeReg2">
+            </div>
+          </form>
+          <br>
+        </div>
+        <figure class="figure">
+          <a href="./view/puntos.html"><img src="./assets/familia tarjeta.jpg" class="figure-img img-fluid rounded-3"
+              width="900px"></a>
+          <figcaption class="figure-caption text-danger">Con los puntos Bank JsMorgan accede a grandes descuentos.
+          </figcaption>
+        </figure>
+        <figure class="figure">
+          <a href="#"><img src="./assets/seguros.jfif" class="figure-img img-fluid rounded-3" width="500px"></a>
+          <figcaption class="figure-caption text-danger">Las mejores polizas, seguros.</figcaption>
+        </figure>
+        <figure class="figure">
+          <img src="./assets/dolar.jpg" class="figure-img img-fluid rounded-3" width="400px">
+          <figcaption class="figure-caption text-danger">Compra venta de moneda extranjera.</figcaption>
+        </figure>
+      </div>
+      <div class="col-3 text-dark d-flex flex-column">
+        <figure class="figure">
+          <img src="./assets/paises.webp" class="figure-img img-fluid rounded-3" width="270px">
+          <figcaption class="figure-caption text-dark">Uniendo las más importanes capitales alrededor del mundo entero,
+            la cobertura más extensa.</figcaption>
+        </figure>
+        <figure class="figure">
+          <img src="./assets/compras.jpg" class="figure-img img-fluid rounded-3" width="270px">
+          <figcaption class="figure-caption text-dark">Recorda que por ser cliente de nuestro Banco accedes a una amplia
+            gama crediticia e innumerables descuentos y beneficios.</figcaption>
+        </figure>
+        <figure class="figure">
+          <img src="./assets/bancoonline.jpg" class="figure-img img-fluid rounded-3" width="270px">
+          <figcaption class="figure-caption text-dark">Llevanos siempre con vos, al lado tuyo.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <div class="row col-12 bg-danger text-light d-flex justify-content-center bg-opacity-75">
+      <p>La histórica empresa financiera respaldada por décadas de historia, abre en Argentina su primera filial con el objetivo de brindar sus servicios financieros ya no solo a grandes empresas sino también a grandes personas.</p>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
+  <script src="mainpuntos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
