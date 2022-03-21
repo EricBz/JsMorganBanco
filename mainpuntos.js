@@ -12,11 +12,10 @@ function saldoPuntos () {
 
 //2- Fn que filtra e indica si los puntos son suficientes para cambiarlos por productos, si es asi
 // le da paso a la fn de descuento.
-let boton = document.querySelector("#btn");
-boton.addEventListener("click", xyz)
+
 function xyz () {
-let  entrada = document.querySelector("#seleccion").value;
-let pc = document.querySelector("#puntos").innerText; 
+	let  entrada = document.querySelector("#seleccion").value;
+	let pc = document.querySelector("#puntos").innerText; 
 		let salidaPuntosFiltro = document.querySelector("#salidaPuntosFiltro");
 	 (parseInt(entrada) <= parseInt(pc)) ?
 	(   
@@ -109,7 +108,7 @@ let passreg = document.querySelector("#pass0").value;
 let x = document.querySelector("#mensajeReg");
 let usGuardado ;
 let passGuardado ;
- ((usuarioreg !== '') && (passreg !== '')) ? 
+ ((usuarioreg !== '') && (passreg !== '') && (usuarioreg.length >= 5) && (passreg.length >= 8)) ? 
 (  usGuardado = localStorage.setItem("us0", usuarioreg),
    passGuardado = localStorage.setItem("pass0", passreg),
 
