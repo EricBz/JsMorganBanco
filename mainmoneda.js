@@ -88,10 +88,8 @@ function info() {
              elegido = pulsado[i];
                  }
               }
-        console.log(elegido.value)
         pres.forEach(object => {
 	 (object.plazo == elegido.value) &&
-		console.log(object);
 
      Swal.fire({
   title: `Desea confirmar el préstamo solicitado.`,

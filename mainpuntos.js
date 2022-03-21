@@ -19,13 +19,13 @@ let  entrada = document.querySelector("#seleccion").value;
 let pc = document.querySelector("#puntos").innerText; 
 		let salidaPuntosFiltro = document.querySelector("#salidaPuntosFiltro");
 	 (parseInt(entrada) <= parseInt(pc)) ?
-	(    console.log("puede cajear"),
+	(   
 		descuentos (entrada),
 
 		salidaPuntosFiltro.innerHTML = `<p>Puede canjear.</p>
 		<button type="button" onclick="restaCambiosPuntos()">Cajear</button>`  )
 :
-	(	console.log("no puede canjear"),
+	(
 		
 		salidaPuntosFiltro.innerHTML = `<p>No puede canjear vea sus puntos y saldo o sus puntos no son suficientes</p>`
 	)
@@ -46,7 +46,6 @@ let pc = document.querySelector("#puntos").innerText;
 
 	
 		salidaPuntosFiltro.innerHTML =  `Ha canjeado el beneficio le quedan ${resultado} puntos`;
-	console.log("A usted le quedan " + resultado)
 	let p = document.querySelector("#puntos");
 	p.innerHTML = `${resultado}`;
 }
@@ -83,7 +82,6 @@ const productos = [
 
 
 function descuentos (entrada) {
-console.log(entrada)
 let contenedor = document.querySelector("#salidaPuntos");
 productos.forEach(object => {
 	 (object.id == entrada) ?
