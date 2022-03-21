@@ -13,7 +13,7 @@ function validar () {
 	let valoresPosibles =  /^[0-9]+$/;
 	let monto = document.querySelector("#valor").value;
 	let nombre = document.querySelector("#nombre").value.toUpperCase();
-	if ((monto !== "") && (nombre !== "") && ( monto.match(valoresPosibles) )) {
+	if ((monto !== "") && (nombre !== "") && ( monto.match(valoresPosibles)) && (!nombre.match(valoresPosibles))) {
 		cvmoneda()
 	} else {
 		Swal.fire({
